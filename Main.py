@@ -5,7 +5,10 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return {"status": "ok", "service": "telegram-orquestador-backend"}
+    return {
+        "status": "ok",
+        "service": "telegram-orquestador-backend"
+    }
 
 @app.post("/webhook")
 async def telegram_webhook(request: Request):
